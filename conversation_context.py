@@ -23,12 +23,9 @@ class ConversationContext:
         # Hint: The system prompt should be a message dict with role "system"
 
     def add_message(self, message):
-        pass
         # TODO: Implement message addition logic
-        print(message)
         self.messages.append(message)
 
     def get_history(self):
-        pass
         # TODO: return the full message history
         return self.messages

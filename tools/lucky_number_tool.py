@@ -9,6 +9,7 @@ be finalized during the laboratory.
 """
 
 from .tool import Tool
+import datetime
 
 
 def lucky_number(birth_date):
@@ -45,9 +46,14 @@ def lucky_number(birth_date):
         38
     """
 
-    pass
-    return 28
+    data_azi = datetime.datetime.now().strftime("%d%m%Y")
+    cifre_data_azi = sum(int(digit) for digit in data_azi)
 
+    cifre_data_nastere = sum(int(digit) for digit in birth_date)
+    
+    numar_norocos = cifre_data_azi + cifre_data_nastere
+
+    return numar_norocos
 
 """
 Create and return the tool definition.
